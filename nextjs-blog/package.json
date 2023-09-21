@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.84.0",
+    "@react-three/fiber": "^8.14.2",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.156.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
