@@ -1,18 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { Canvas } from "@react-three/fiber";
 import { extend } from "@react-three/fiber";
-import { OrbitControls, TransformControls } from "three-stdlib";
-extend({ OrbitControls, TransformControls });
-
-function Box() {
-  return (
-    <mesh>
-      <boxBufferGeometry attach="geometry" />
-      <meshLambertMaterial attach="material" color="hotpink" />
-    </mesh>
-  );
-}
+import styles from "../styles/Home.module.css";
+import { Canvas } from "three-stdlib";
+extend({ Canvas });
 
 export default function Home() {
   return (
@@ -21,40 +11,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <Canvas>
-          <orbitControls />
-          <ambientLight intensity={0.5} />
-          <spotLight position={[10, 15, 10]} angle={0.3} />
-          <Box />
-        </Canvas>
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
+      <main></main>
       <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
