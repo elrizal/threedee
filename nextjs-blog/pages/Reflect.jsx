@@ -64,7 +64,6 @@ export const Reflect = forwardRef(
         update: () => {
           api.number = 0;
           intersects = [];
-
           vStart.copy(api.start);
           vEnd.copy(api.end);
           vDir.subVectors(vEnd, vStart).normalize();
