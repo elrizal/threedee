@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import { Reflect } from "./Reflect";
-
+import { Rainbow } from "./Components/Rainbow";
 export default function App() {
   return (
     <Canvas orthographic camera={{ zoom: 100 }}>
@@ -17,6 +17,8 @@ function Scene() {
   const streaks = useRef();
   const glow = useRef();
   const reflect = useRef();
+  const ref = useRef();
+
   const [streakTexture, glowTexture] = useTexture([
     "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1LRW0uiGloWqJcY0WOxREA/61737e55cab34a414d746acb9d0a9400/download.png",
     "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/2NKOrPD3iq75po1v0AA6h2/fc0d49ba0917bcbfd3d8a63688045a0c/download.jpeg",
@@ -79,6 +81,7 @@ function Scene() {
 
   return (
     <>
+      <Rainbow ref={ref} startRadius={0} endRadius={0.65} fade={0} />
       <Reflect
         ref={reflect}
         far={10}
