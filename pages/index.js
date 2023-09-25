@@ -4,6 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 import { Reflect } from "./Reflect";
 import { Rainbow } from "./Components/Rainbow";
+
 export default function App() {
   return (
     <Canvas orthographic camera={{ zoom: 100 }}>
