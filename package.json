@@ -11,6 +11,8 @@
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-postprocessing": "^1.4.0",
+    "screen-space-reflections": "^2.5.0",
     "three": "^0.156.1"
   },
   "engines": {
